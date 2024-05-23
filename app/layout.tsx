@@ -8,6 +8,8 @@ import FooterPage from "./components/Footer";
 
 
 import { ReactNode } from "react";
+import { Toaster } from "@/components/ui/toaster";
+import NewSignIn from "./components/NewSignIn";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -27,12 +29,14 @@ export default function RootLayout({ children }: RootLayoutProps){
       
         <CartProvider>
         <NavBar />
+        
         <ShoppingCartModal />
         
         
           
           
         {children}
+        <Toaster />
         </CartProvider>
         
         
