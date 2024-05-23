@@ -14,7 +14,7 @@ export interface ProductCart{
     price_id: string,
 }
 
-export default function AddtoBag({currency, description, image, name, price, price_id}: ProductCart){
+export default function AddtoBag({currency, description, image, name, price, price_id,}: ProductCart){
 
     const { addItem, handleCartClick } = useShoppingCart();
 
@@ -29,5 +29,6 @@ export default function AddtoBag({currency, description, image, name, price, pri
     return <Button onClick={() => {
                 addItem(product), handleCartClick();
             }}>
-        Add to Cart</Button>;  
+        Add to Cart
+        </Button>;  
 }
